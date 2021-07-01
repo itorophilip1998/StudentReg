@@ -15,21 +15,26 @@ class ResultController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
-            return view('result'); 
+    {
+            return view('result');
     }
- 
+
     public function store(Request $request)
     {
 
-        // $this->validate($request, [
-        //     'files'  => 'required|mimes:xls,xlsx|array'
-        //    ]);
-        
-        $filename = $request->file('files')[0]; 
-        $data = $request->all(); 
-        // dd($data); 
-         Excel::import(new ProjectsImport($data),  $filename); 
+        $this->validate($request, [
+            'files'  => 'required'
+           ]);
+
+        $filename = $request->file('files')[0];
+        $data = $request->all();
+        // dd($data);
+         Excel::import(new ProjectsImport($data),  $filename);
+            $info=[
+                "message"=>"Successful"
+            ];
+          return response()->json($info, 200);
+
     }
 
     /**
@@ -45,8 +50,14 @@ class ResultController extends Controller
         ->where('regNo',$request->regNo)
         ->where('program',$request->program)
         ->first();
-        return response()->json($result, 200); 
+        // dd($request->all());
+        return response()->json($result, 200);
+    }
+    public function allResult()
+    {
+        $result=Result::all();
+        return response()->json($result, 200);
     }
 
- 
+
 }

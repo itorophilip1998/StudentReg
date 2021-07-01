@@ -5,7 +5,7 @@ use App\Result;
 use App\Contact;
 use App\DailyNews;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route; 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,11 +24,11 @@ Route::get('/news', function () {
     if(Auth::check())
     {
         $user=User::where('id',Auth::user()->id)
-        ->with('profile')->first(); 
+        ->with('profile')->first();
         return view('news',compact('user'));
      }
-   return redirect('/login'); 
-    
+   return redirect('/login');
+
 });
 
 Route::get('/auth-logout', function () {
@@ -46,13 +46,14 @@ Route::get('/admin', function () {
     'contact'=>Contact::latest()->get(),
    ];
    return response()->json($data, 200);
-   
+
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/get-result', 'ResultController@getResult');
+Route::get('/all-result', 'ResultController@allResult');
 Route::post('/create-user', 'Auth\RegisterController@store');
 Route::delete('/delete-user/{user}', 'Auth\RegisterController@delete');
 Route::resource('comments', 'CommentsController');
@@ -60,4 +61,4 @@ Route::resource('contact', 'ContactController');
 Route::resource('dailyNews', 'DailyNewsController');
 Route::resource('profile', 'ProfileController');
 Route::resource('result', 'ResultController');
-Route::resource('likes', 'LikesController'); 
+Route::resource('likes', 'LikesController');

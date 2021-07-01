@@ -169,7 +169,7 @@
   <div class="about" style="background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReP0tpJwnhR0p3yyLYmCP5ahyjnEog65nJ-Q&usqp=CAU');background-size:cover " id="about">
     <div class="container pt-3 pb-3 ">
         <div class="section-title text-center">
-            <h3 >About Us</h3>  
+            <h3 >About Us</h3>
         </div><!-- end title -->
         <div class="row pb-3">
             <div class="col-md-5 mx-auto">
@@ -179,9 +179,9 @@
             <div class="col-md-5 mx-auto">
                 <h2 ><strong class="text-warning">Our</strong> VISION</h2>
                 <p class="lead" >To be a pace setter in the provision of technological innovative and value oriented training to meeting the manpower requirements necessary for the development of our great nation and beyond.</p>
-            </div>    
+            </div>
         </div>
-        <div class="cards row shadow "> 
+        <div class="cards row shadow ">
           <div class="card col-md-3 p-0 mx-auto">
               <img class="card-img-top" src="https://fedpolyukana.edu.ng/wp-content/uploads/2020/09/Rector-with-gown-re-242x300.jpg" alt="">
               <div class="card-body">
@@ -232,10 +232,10 @@
                             <div class="row row-fluid">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <input type="text" name="name" id="first_name" class="form-control" placeholder="FirstName LastName">
-                                </div> 
+                                </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
-                                </div> 
+                                </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     <textarea class="form-control" name="message" rows="12" placeholder="Give us more details.."></textarea>
                                 </div>
@@ -331,13 +331,13 @@
 	<!-- Mapsed JavaScript -->
 	<script src="{{ asset('data/js/mapsed.js')}}"></script>
 	<script src="{{ asset('data/js/01-custom-places-example.js')}}"></script>
-	<script>
+	{{-- <script>
 		timeline(document.querySelectorAll('.timeline'), {
 			forceVerticalMode: 700,
 			mode: 'horizontal',
 			verticalStartPosition: 'left',
 			visibleItems: 4
 		});
-	</script>
+	</script> --}}
 </body>
 </html>

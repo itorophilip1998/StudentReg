@@ -11,7 +11,7 @@
     <!-- Site Icons -->
     <link rel="shortcut icon" href="https://i2.wp.com/www.vanguardngr.com/wp-content/uploads/2020/12/Federal-Polytechnic-Ukana-School-Fees.jpeg?resize=1024%2C1024&ssl=1&mrf-size=m" type="image/x-icon" />
     <link rel="apple-touch-icon" href="https://i2.wp.com/www.vanguardngr.com/wp-content/uploads/2020/12/Federal-Polytechnic-Ukana-School-Fees.jpeg?resize=1024%2C1024&ssl=1&mrf-size=m">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -49,7 +49,7 @@
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link text-warning border-warning border rounded-lg" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li> 
+                            </li>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-warning" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

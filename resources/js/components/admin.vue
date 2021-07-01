@@ -2,28 +2,28 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-3">
-                <div class="card p-0 d-block d-md-none"> 
+                <div class="card p-0 d-block d-md-none">
                     <div class="card-body">
-                   
+
                         <ul class="list-group border-0 d-inline">
-                            <li v-for="(item, index) in links" style="display: inline-block;" :key="index" class="list-group-item p-0 border-0"> 
+                            <li v-for="(item, index) in links" style="display: inline-block;" :key="index" class="list-group-item p-0 border-0">
                                 <router-link class="btn d-block text-left p-2 hoverable border-bottom " :to="item.to">
                                     <i :class="item.icon" aria-hidden="true"></i></router-link>
-                            </li> 
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="card p-0 d-none d-md-block"> 
+                <div class="card p-0 d-none d-md-block">
                     <div class="card-body">
 
                         <ul class="list-group border-0">
                             <li v-for="(item, index) in links" :key="index"
-                             :class="`list-group-item p-0 border-0 
-                             ${($router.history.current.path == item.to) ? 'active' :''} `"> 
+                             :class="`list-group-item p-0 border-0
+                             ${($router.history.current.path == item.to) ? 'active' :''} `">
 
                                 <router-link class="btn d-block text-left p-2 hoverable border-bottom " :to="item.to">
                                     <i :class="item.icon" aria-hidden="true"></i> {{ item.name}}</router-link>
-                            </li> 
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="text-capitalize"> {{ ($router.history.current.path.slice(1)) ? $router.history.current.path.slice(1) :"Dahboard"}} </h3> 
+                        <h3 class="text-capitalize"> {{ ($router.history.current.path.slice(1)) ? $router.history.current.path.slice(1) :"Dahboard"}} </h3>
                     </div>
 
                     <div class="card-body px-0">
@@ -52,7 +52,7 @@
                     {
                         to:'/dashboard',
                         name:'Dashboard',
-                        icon:'fa fa-user',
+                        icon:'fa fa-dashboard',
                     },
                     {
                         to:'/user',
@@ -67,7 +67,7 @@
                     {
                         to:'/news',
                         name:'Daily News',
-                        icon:'fa fa-newspapper-o',
+                        icon:'fa fa-newspaper-o',
                     },
                     {
                         to:'/contact',

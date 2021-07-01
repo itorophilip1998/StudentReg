@@ -9,8 +9,8 @@ class Result extends Model
 {
     protected $fillable = [
         'regNo','name', 'courses_grades', 'department','school' , 'gpa' ,
-         'cgpa','creadit_point','creadit_unit',
-         'session','semester','program' 
+         'cgpa','credit_point','credit_unit',
+         'session','semester','program','result'
     ];
     protected $casts=[
         'courses_grades'=>'array'

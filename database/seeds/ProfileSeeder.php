@@ -1,7 +1,9 @@
 <?php
 
 use App\User;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileSeeder extends Seeder
 {
@@ -30,7 +32,7 @@ class ProfileSeeder extends Seeder
         'lga'=>'Essien Udim',
         'address'=>'Ukana',
         'status'=>'Admin Entry',
-        'picture'=>'http://localhost:8000/storage/images/default.jpg' 
+        'picture'=>'http://localhost:8000/storage/images/default.jpg'
         ]);
     }
 }
